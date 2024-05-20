@@ -10,6 +10,6 @@
   color: white;
 }
 
-p {
-  border: 10px;
+.card-item {
+  align-items: center;
 }

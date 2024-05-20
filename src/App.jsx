@@ -8,11 +8,12 @@ function App() {
 
   return (
 <div className='body'> 
-<h1 className='nome'> my finance </h1>
+<h1 className=''> my finance </h1>
 <button>Nova Transação </button>
-<div className='card'>
-<p>Entradas Saídas Total </p>
-
+<div class="card">
+      <div class="card-item">Entradas</div>
+      <div class="card-item">Saídas</div>
+      <div class="card-item">Total</div>
 
 <p> Título Valor Categoria Data </p>
 </div>
