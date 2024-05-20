@@ -1,0 +1,15 @@
+
+
+.body {
+  background-color: rgb(68, 17, 116);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+  color: white;
+}
+
+p {
+  border: 10px;
+}
