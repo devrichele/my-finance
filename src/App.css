@@ -43,30 +43,58 @@ button:active {
 }
 
 .cards {
-  width: 80%;
+  width: 60%;
   display: flex;
-  justify-content: space-around;
   position: absolute;
   top: 150px; 
   z-index: 2;
-}
-
-.card {
-  background-color: white;
-  border-radius: 8px;
+  background-color: rgb(139, 66, 66);
   padding: 20px;
-  width: 25%; 
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0 10px; 
 }
 
-.card h2 {
-  margin-bottom: 10px;
-  color: rgb(44, 7, 7);
+.card{
+
+  width: 300px;
+  height: 150px;
+  background-color: rgb(221, 141, 141);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+
 }
 
-.card p {
-  font-size: 24px;
-  color: rgb(44, 7, 7);
+.container-card-icon {
+  width: 95px;
+  height: 100px;
+  background-color: rgb(236, 163, 163);
+  border-radius: 45%; 
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+
 }
+
+.transacoes{
+  color:rgb(63, 21, 21);
+  flex-direction: column;
+  align-items: center;
+  
+  
+}
+.valor {
+  color:rgb(19, 3, 3);
+  font-weight:bold;
+  font-size: 32px;
+  
+}
+
+.texto {
+text-align: justify;
+color:rgb(73, 47, 47)
+
+}
+
+
