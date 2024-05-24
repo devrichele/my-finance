@@ -10,7 +10,6 @@ function App() {
     <div className='cards'>
     <div className='card'>
       <div className="container-card-icon">
-
       </div>
       <div className="transacoes">
         <p className="texto">Entradas</p>
