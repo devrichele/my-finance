@@ -10,15 +10,15 @@ function App() {
   <div className='cards'>
     <div className='card'>
       <h2>Entrada</h2>
-      <p>$0.00</p>
+      <p>0.00</p>
     </div>
     <div className='card'>
       <h2>Saída</h2>
-      <p>$0.00</p>
+      <p>0.00</p>
     </div>
     <div className='card'>
       <h2>Total</h2>
-      <p>$0.00</p>
+      <p>0.00</p>
     </div>
   </div>
 </div>
