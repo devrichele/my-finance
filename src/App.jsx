@@ -1,4 +1,5 @@
 import "./App.css"
+import Card from "./components/cards"
 
 function App() {
   return (
@@ -8,16 +9,11 @@ function App() {
     <button>Nova Transação</button>
     </div>
     <div className='cards'>
-    <div className='card'>
-      <div className="container-card-icon">
-      </div>
-      <div className="transacoes">
-        <p className="texto">Entradas</p>
-        <p className="valor"> R$ 1020,50</p>
-      </div>
+    <Card texto ={"Entradas"} valor={"450"}/>
+    <Card texto ={"Saídas"} valor={"250"}/>
+    <Card texto ={"Total"} valor={"700"}/>
 
-    </div>
-  </div>
+   </div>
 </div>
 
 
