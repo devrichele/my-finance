@@ -6,7 +6,6 @@
 
 .body {
   width: 100vw;
-  background-color: rgb(44, 7, 7);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +21,8 @@
   color: white;
   position: relative;
   z-index: 1;
+  background-color: rgb(44, 7, 7);
+
 }
 
 button {
@@ -49,7 +50,7 @@ button:active {
   top: 150px; 
   z-index: 2;
   background-color: rgb(139, 66, 66);
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   margin: 0 10px; 
 }
@@ -98,3 +99,6 @@ color:rgb(73, 47, 47)
 }
 
 
+.card2 {
+  margin-top: 180px;
+}
