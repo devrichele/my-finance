@@ -12,13 +12,11 @@ function App() {
         <Card texto ={"Entradas"} valor={"450,00"}/>
         <Card texto ={"Saídas"} valor={"250,00"}/>
         <Card texto ={"Total"} valor={"700,00"}/>
-
-      </div>
-      <div className="card2">
+      </div> 
+      <div className="gastos">
         <Card texto ={"Escola"} valor={"900,00"}/>
-        <Card texto ={"Eletropaulo"} valor={"100,00"}/>
-        <Card texto ={"Sabesp"} valor={"150,00"}/>
-
+        <Card texto ={"Curso"} valor={"250,00"}/>
+        <Card texto ={"Spotify"} valor={"70,00"}/>
       </div>
     </div>
 
