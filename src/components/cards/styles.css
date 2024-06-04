@@ -13,4 +13,23 @@
     
   }
 
+  .card{
+
+    width: 300px;
+    height: 150px;
+    background-color: rgb(221, 141, 141);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    
+  
+  }
+  
+
+  .historico{
+    width: 70px;
+
+  }
   

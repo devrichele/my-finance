@@ -44,7 +44,7 @@ button:active {
 }
 
 .cards {
-  width: 60%;
+  width: 80%;
   display: flex;
   position: absolute;
   top: 150px; 
@@ -58,19 +58,6 @@ button:active {
   
 }
 
-.card{
-
-  width: 300px;
-  height: 150px;
-  background-color: rgb(221, 141, 141);
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  margin: 10px;
-  
-
-}
 
 .container-card-icon {
   width: 95px;
