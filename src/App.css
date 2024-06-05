@@ -44,10 +44,10 @@ button:active {
 }
 
 .cards {
-  width: 80%;
+  width: 900px;
   display: flex;
   position: absolute;
-  top: 150px; 
+  top: 150px;
   z-index: 2;
   background-color: rgb(139, 66, 66);
   padding: 15px;

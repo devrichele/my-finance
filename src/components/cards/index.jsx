@@ -8,11 +8,11 @@ function Card({texto, valor, type}) {
     //   return <p> dormir </p>
     // }
 
-    type == "transacoes" ? <h1> historico </h1> : <p> dormir </p>
+    // type == "card" ? "cardBaixo" : "card";
 
     return (
       
-        <div className='card'>
+        <div className={type == "baixo" ? "cardBaixo" : "card"}>
           <div className="container-card-icon">
           </div>
           <div className="transacoes">
