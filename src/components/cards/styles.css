@@ -36,3 +36,15 @@
     
   
   }
+
+  .texto {
+    text-align: justify;
+    color:rgb(73, 47, 47)
+    
+    }
+
+.textobaixo {
+      text-align: justify;
+      color:rgb(209, 12, 12)
+      
+}

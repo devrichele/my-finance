@@ -16,10 +16,10 @@ function Card({texto, valor, type}) {
           <div className="container-card-icon">
           </div>
           <div className="transacoes">
-            <p className="texto">{texto}</p>
+            <p className={type == "baixo" ? "textobaixo" : "texto"}>{texto}</p>
             <p className="valor"> R$ {valor}</p>
           </div>
-        
+        {type == "baixo" ?  <h1>flory</h1> : ""}
         </div>
         
     )         
