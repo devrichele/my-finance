@@ -17,9 +17,9 @@ function App() {
         
       </div> 
       <div className="gastos">
-        <Card type={"baixo"} texto ={"Escola"} valor={"900,00"}/>
-        <Card type={"baixo"} texto ={"Curso"} valor={"250,00"}/>
-        <Card type={"baixo"} texto ={"Spotify"} valor={"70,00"}/>
+        <Card type={"baixo"} texto ={"Escola"} valor={"Quarta-feira, 13:00 PM"}/>
+        <Card type={"baixo"} texto ={"Curso"} valor={"Sexta-feira, 17:00 PM"}/>
+        <Card type={"baixo"} texto ={"Spotify"} valor={"Domingo, 6:00AM"}/>
         
       </div>
     </div>

@@ -45,6 +45,14 @@
 
 .textobaixo {
       text-align: justify;
-      color:rgb(209, 12, 12)
+      color:black
       
+      
+}
+
+.valorBaixo{
+  color:rgb(19, 3, 3);
+  font-size: 15px;
+  
+
 }

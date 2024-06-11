@@ -88,3 +88,7 @@ button:active {
 .gastos {
   margin-top: 15%;
 }
+
+.valorBaixo{
+  color:rgb(19, 3, 3);
+}

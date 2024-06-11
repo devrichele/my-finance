@@ -17,9 +17,9 @@ function Card({texto, valor, type}) {
           </div>
           <div className="transacoes">
             <p className={type == "baixo" ? "textobaixo" : "texto"}>{texto}</p>
-            <p className="valor"> R$ {valor}</p>
+            <p className={type == "baixo" ? "valorBaixo" : "valor"}> {type == "baixo" ? "" : "R$" } {valor}</p>
           </div>
-        {type == "baixo" ?  <h1>flory</h1> : ""}
+            {type == "baixo" ?  <h1> -R$ 200,00</h1> : ""}
         </div>
         
     )         
