@@ -1,6 +1,6 @@
 
 import "./styles.css"
-function Card({texto, valor, type}) {
+function Card({texto, valor, type, mudar }) {
 
     // if (titulo == "boa noite") {
     //   return <h1> estudar </h1>
@@ -19,7 +19,8 @@ function Card({texto, valor, type}) {
             <p className={type == "baixo" ? "textobaixo" : "texto"}>{texto}</p>
             <p className={type == "baixo" ? "valorBaixo" : "valor"}> {type == "baixo" ? "" : "R$" } {valor}</p>
           </div>
-            {type == "baixo" ?  <h1> -R$ 200,00</h1> : ""}
+            {type == "baixo" ?  <h1 className="saidaBaixo"> -R$ {mudar} </h1> : ""}
+             
         </div>
         
     )         

@@ -39,20 +39,39 @@
 
   .texto {
     text-align: justify;
-    color:rgb(73, 47, 47)
+    color:rgb(46, 28, 28);
     
     }
 
 .textobaixo {
-      text-align: justify;
-      color:black
+  text-align: justify;
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+
+  }
       
       
-}
 
 .valorBaixo{
   color:rgb(19, 3, 3);
   font-size: 15px;
+  }
   
 
+.saidaBaixo{
+  margin-left: auto; 
+  font-size: 15px;
+
+  
+  
+  
+}
+
+.valor {
+  color:rgb(19, 3, 3);
+  font-weight:bold;
+  font-size: 25px;
+  text-align: justify;
+  
 }
