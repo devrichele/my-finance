@@ -2,13 +2,18 @@ import "./App.css"
 import Card from "./components/cards"
 import Modelo from "./components/modelo"
 
+
+function olamundo (){
+  const age = prompt("Por favor, insira sua idade:");
+  alert("você tem: " + age);
+
+}
 function App() {
 
+// Toda vez que criar uma function colocar em cima do return
+// chave só acima do return
+// para executar uma function colocar em parenteses
   const isOpenModelo = true
-
-  function alertaMensagem(name){
-    alert (name)
-  }
 
   return (
     <div className='body'>
@@ -17,12 +22,16 @@ function App() {
         <button onClick={() => alertaMensagem ("Brenda Richele")} > 
           Nova Transação
         </button>
+
+        <button onClick={() => olamundo()}>
+          Olá
+        </button>
+
       </div>
       <div className='cards'>
         <Card texto ={"Entradas"} valor={"450,00"}/>
         <Card texto ={"Saídas"} valor={"250,00"}/>
         <Card texto ={"Total"} valor={"700,00"}/>
-        
         
       </div> 
       <div className="gastos">
@@ -31,7 +40,7 @@ function App() {
         <Card type={"baixo"} mudar={50} texto ={"Spotify"} valor={"Domingo, 6:00 AM"}/>
         
       </div>
-      {isOpenModelo && <Modelo />}
+      {/* {isOpenModelo && <Modelo />} */}
     </div>
 
 
