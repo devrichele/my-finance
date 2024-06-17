@@ -1,14 +1,23 @@
+import { useState } from "react"
 import "./App.css"
 import Card from "./components/cards"
 import Modelo from "./components/modelo"
 
 
-function olamundo (){
-  const age = prompt("Por favor, insira sua idade:");
-  alert("você tem: " + age);
+// function olamundo (){
+//   const age = prompt("Por favor, insira sua idade:");
+//   alert("você tem: " + age);
 
-}
-function App() {
+// }
+  function App() {
+  const [modeloAberto, setModeloAberto] = useState (false)
+  
+  function alertModeloAberto () {
+    setModeloAberto (true)
+  }
+  function alertModeloFechado () {
+    setModeloAberto (false)
+  }
 
 // Toda vez que criar uma function colocar em cima do return
 // chave só acima do return
@@ -19,13 +28,13 @@ function App() {
     <div className='body'>
       <div className='empresa'>
         <h1 className='logo'>Rich Finance</h1>
-        <button onClick={() => alertaMensagem ("Brenda Richele")} > 
+        <button onClick={() => alertModeloAberto ()} > 
           Nova Transação
         </button>
 
-        <button onClick={() => olamundo()}>
+        {/* <button onClick={() => olamundo()}>
           Olá
-        </button>
+        </button> */}
 
       </div>
       <div className='cards'>
@@ -40,7 +49,8 @@ function App() {
         <Card type={"baixo"} mudar={50} texto ={"Spotify"} valor={"Domingo, 6:00 AM"}/>
         
       </div>
-      {/* {isOpenModelo && <Modelo />} */}
+    {modeloAberto && <Modelo onClickModelo={()=>alertModeloFechado ()}/>}
+
     </div>
 
 
