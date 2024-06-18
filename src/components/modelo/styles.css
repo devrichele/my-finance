@@ -1,8 +1,18 @@
-.body-teste {
-    position: absolute;
+.body-modelo {
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(10, 10, 10, 0.678);
-    z-index: 60;
+    background-color: rgba(0, 0, 0, 0.590);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.conteudoModelo {
+    width: 576px;
+    height: 547px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+}
