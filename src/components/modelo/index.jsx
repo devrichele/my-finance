@@ -13,10 +13,14 @@ export default function Modelo (){
         </div>
         <form>
             <h1> Cadastrar Transação </h1>
-            <div>
-                <EntradaCadastro />
-
-                <EntradaCadastro />
+            <div style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              gap: 10
+            }}>
+                <EntradaCadastro placeholder ={"Título"}/>
+                <EntradaCadastro placeholder ={"Valor"}/>
 
             </div>
         </form>
