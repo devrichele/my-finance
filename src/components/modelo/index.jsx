@@ -1,15 +1,15 @@
 import EntradaCadastro from "../entrada"
 import "./styles.css"
+import BotaoTransacoes from "../botao"
 
 
 
-export default function Modelo (){
+export default function Modelo ({onClickModelo}){
     
     return (
-    <div className="body-modelo">
+    <div className="body-modelo" onClick={onClickModelo} >
       <div className="conteudoModelo">
         <div>
-            
         </div>
         <form>
             <h1> Cadastrar Transação </h1>
@@ -21,6 +21,11 @@ export default function Modelo (){
             }}>
                 <EntradaCadastro placeholder ={"Título"}/>
                 <EntradaCadastro placeholder ={"Valor"}/>
+
+            </div>
+            <div className="bTransacoes">
+              <BotaoTransacoes textoBotao ={"Entrada"}/>
+              <BotaoTransacoes textoBotao ={"Saída"}/>
 
             </div>
         </form>

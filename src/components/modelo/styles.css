@@ -16,3 +16,12 @@
     border-radius: 4px;
     padding: 20px;
 }
+.bTransacoes{
+    
+    width: 236px;
+    height: 64px;
+    margin-top: 10px;
+    color:rgb(112, 109, 109);
+    gap: 60px;
+    display: flex;
+}

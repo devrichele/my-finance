@@ -3,7 +3,6 @@ import "./App.css"
 import Card from "./components/cards"
 import Modelo from "./components/modelo"
 
-
 // function olamundo (){
 //   const age = prompt("Por favor, insira sua idade:");
 //   alert("você tem: " + age);
@@ -49,7 +48,7 @@ import Modelo from "./components/modelo"
         <Card type={"baixo"} mudar={50} texto ={"Spotify"} valor={"Domingo, 6:00 AM"}/>
         
       </div>
-    {modeloAberto && <Modelo onClickModelo={()=>alertModeloFechado ()}/>}
+    <Modelo onClickModelo={()=>alertModeloFechado ()}/>
 
     </div>
 
