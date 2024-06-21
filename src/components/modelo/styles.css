@@ -15,6 +15,11 @@
     background-color: white;
     border-radius: 4px;
     padding: 20px;
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+
 }
 .bTransacoes{
     
@@ -24,4 +29,23 @@
     color:rgb(112, 109, 109);
     gap: 60px;
     display: flex;
+}
+.Inserirdados{
+    width: 98%;
+    color:rgb(185, 174, 174);
+    background-color:rgb(112, 109, 109);
+    margin-top: 20px;
+}
+
+.modelForm{
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 40px;
+    width: 100%;
+
+}
+.Inserirdados{
+margin-top: auto;
 }

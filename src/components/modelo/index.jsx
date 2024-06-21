@@ -1,6 +1,8 @@
 import EntradaCadastro from "../entrada"
 import "./styles.css"
 import BotaoTransacoes from "../botao"
+import { IoIosClose } from "react-icons/io";
+
 
 
 
@@ -9,11 +11,11 @@ export default function Modelo ({onClickModelo}){
     return (
     <div className="body-modelo" onClick={onClickModelo} >
       <div className="conteudoModelo">
-        <div>
-        </div>
-        <form>
+        <IoIosClose color="#cecece" style={{cursor:"pointer"}}/>
+        <form className="modelForm">
             <h1> Cadastrar Transação </h1>
-            <div style={{
+       <div>
+        <div style={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -28,6 +30,10 @@ export default function Modelo ({onClickModelo}){
               <BotaoTransacoes textoBotao ={"Saída"}/>
 
             </div>
+            </div>
+            <button className="Inserirdados">
+              Cadastar
+            </button>
         </form>
       </div>
     </div>
