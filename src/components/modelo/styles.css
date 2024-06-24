@@ -22,13 +22,12 @@
 
 }
 .bTransacoes{
-    
-    width: 236px;
-    height: 64px;
+    width: 100%;
     margin-top: 10px;
     color:rgb(112, 109, 109);
-    gap: 60px;
+    /* gap: 20px; */
     display: flex;
+    justify-content: space-between;
 }
 .Inserirdados{
     width: 98%;

@@ -11,11 +11,11 @@ export default function Modelo ({onClickModelo}){
     return (
     <div className="body-modelo" onClick={onClickModelo} >
       <div className="conteudoModelo">
-        <IoIosClose color="#cecece" style={{cursor:"pointer"}}/>
+        <IoIosClose color="#cecece" style={{cursor:"pointer"}} size={25}/>
         <form className="modelForm">
             <h1> Cadastrar Transação </h1>
        <div>
-        <div style={{
+          <div style={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -24,12 +24,12 @@ export default function Modelo ({onClickModelo}){
                 <EntradaCadastro placeholder ={"Título"}/>
                 <EntradaCadastro placeholder ={"Valor"}/>
 
-            </div>
-            <div className="bTransacoes">
-              <BotaoTransacoes textoBotao ={"Entrada"}/>
-              <BotaoTransacoes textoBotao ={"Saída"}/>
+          </div>
+          <div className="bTransacoes">
+            <BotaoTransacoes typeIcon ={"up"} textoBotao ={"Entrada"}/>
+            <BotaoTransacoes textoBotao ={"Saída"}/>
 
-            </div>
+          </div>
             </div>
             <button className="Inserirdados">
               Cadastar

@@ -1,6 +1,5 @@
 .botao-cadastro{
-    background-color: rgb(212, 221, 219);
-    width: 236px;
+    width: 255px;
     height: 64px;
     border-radius: 4px;
     border:solid 1px #D7D7D7;
@@ -8,6 +7,9 @@
     padding: 0px 10px;
     margin-top: 10px;
     color:rgb(112, 109, 109);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 
 }
