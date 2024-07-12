@@ -2,13 +2,18 @@ import EntradaCadastro from "../entrada"
 import "./styles.css"
 import BotaoTransacoes from "../botao"
 import { IoIosClose } from "react-icons/io";
+import { useState } from "react";
 
 
 
 
 export default function Modelo ({onClickModelo}){
-    
-    return (
+
+  const [title, setTitle ] = useState("")
+  const [valor, setValor] = useState("")
+  const [opcoes, setOpcoes] = useState("")
+
+   return (
     <div className="body-modelo" onClick={onClickModelo} >
       <div className="conteudoModelo">
         <IoIosClose color="#cecece" style={{cursor:"pointer"}} size={25}/>

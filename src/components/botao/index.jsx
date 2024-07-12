@@ -3,6 +3,8 @@ import { LuArrowDownCircle, LuArrowUpCircle } from "react-icons/lu";
 
 
 export default function BotaoTransacoes ({textoBotao, typeIcon, }) {
+
+    
 return(
     <div>
         <button 
