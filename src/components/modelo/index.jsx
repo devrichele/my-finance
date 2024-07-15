@@ -13,6 +13,14 @@ export default function Modelo ({onClickModelo}){
   const [valor, setValor] = useState("")
   const [opcoes, setOpcoes] = useState("")
 
+
+  function lidarComInupt (eventos){
+
+    console.log(eventos.target.value)
+
+}
+
+
    return (
     <div className="body-modelo" onClick={onClickModelo} >
       <div className="conteudoModelo">
@@ -26,7 +34,7 @@ export default function Modelo ({onClickModelo}){
               justifyContent: "space-between",
               gap: 10
             }}>
-                <EntradaCadastro placeholder ={"Título"}/>
+                <EntradaCadastro placeholder ={"Título"} useOnchange = {lidarComInupt}/>
                 <EntradaCadastro placeholder ={"Valor"}/>
 
           </div>
