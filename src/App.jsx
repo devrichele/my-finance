@@ -21,7 +21,7 @@ import Modelo from "./components/modelo"
 // Toda vez que criar uma function colocar em cima do return
 // chave só acima do return
 // para executar uma function colocar em parenteses
-  const isOpenModelo = true
+  const isOpenModelo = false
 
   return (
     <div className='body'>
@@ -30,10 +30,6 @@ import Modelo from "./components/modelo"
         <button onClick={() => alertModeloAberto ()} > 
           Nova Transação
         </button>
-
-        {/* <button onClick={() => olamundo()}>
-          Olá
-        </button> */}
 
       </div>
       <div className='cards'>
@@ -48,7 +44,8 @@ import Modelo from "./components/modelo"
         <Card type={"baixo"} mudar={50} texto ={"Spotify"} valor={"Domingo, 6:00 AM"}/>
         
       </div>
-    <Modelo onClickModelo={()=>alertModeloFechado ()}/>
+    {modeloAberto === true ? <Modelo onClickModelo={()=>alertModeloFechado ()}/> : null}
+
 
     </div>
 
