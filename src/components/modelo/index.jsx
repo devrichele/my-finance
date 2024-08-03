@@ -18,12 +18,15 @@ export default function Modelo ({onClickModelo}){
 
     console.log(eventos.target.value)
 
+
 }
+
+
 
 
    return (
     <div className="body-modelo" onClick={onClickModelo} >
-      <div className="conteudoModelo">
+      <div className="conteudoModelo" onClick={(event) => event.stopPropagation()}>
         <IoIosClose color="#cecece" style={{cursor:"pointer"}} size={25}/>
         <form className="modelForm">
             <h1> Cadastrar Transação </h1>
@@ -54,12 +57,3 @@ export default function Modelo ({onClickModelo}){
 }
 
 
-// import "./styles.css"
-
-// export default function Modelo ({onClickModelo}){
-//     return (
-//     <div className="body-teste" onClick={onClickModelo}>
-//         <h1>Modelo</h1>
-//     </div>
-//     )
-// }
