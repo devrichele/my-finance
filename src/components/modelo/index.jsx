@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 
-export default function Modelo ({onClickModelo}){
+export default function Modelo ({onClickModelo, data}){
 
   const [title, setTitle ] = useState("")
   const [valor, setValor] = useState("")
@@ -16,10 +16,18 @@ export default function Modelo ({onClickModelo}){
 
   function lidarComInupt (eventos){
 
-    console.log(eventos.target.value)
+    setTitle(eventos.target.value)
+  }
 
-
-}
+  function enviar (event){
+    event.preventDefault()
+    data({title: title,
+      date: new Date(),
+      valor: valor,
+      type: opcoes
+    })
+    onClickModelo()
+  }
 
 
 
@@ -28,7 +36,7 @@ export default function Modelo ({onClickModelo}){
     <div className="body-modelo" onClick={onClickModelo} >
       <div className="conteudoModelo" onClick={(event) => event.stopPropagation()}>
         <IoIosClose color="#cecece" style={{cursor:"pointer"}} size={25}/>
-        <form className="modelForm">
+        <form onSubmit={enviar} className="modelForm">
             <h1> Cadastrar Transação </h1>
        <div>
           <div style={{
@@ -37,17 +45,17 @@ export default function Modelo ({onClickModelo}){
               justifyContent: "space-between",
               gap: 10
             }}>
-                <EntradaCadastro placeholder ={"Título"} useOnchange = {lidarComInupt}/>
-                <EntradaCadastro placeholder ={"Valor"}/>
+                <EntradaCadastro value={title} placeholder ={"Título"} useOnchange = {lidarComInupt}/>
+                <EntradaCadastro value={valor} placeholder ={"Valor"} useOnchange={(event) => setValor(event.target.value)}/>
 
           </div>
           <div className="bTransacoes">
-            <BotaoTransacoes typeIcon ={"up"} textoBotao ={"Entrada"}/>
-            <BotaoTransacoes textoBotao ={"Saída"}/>
+            <BotaoTransacoes typeIcon ={"up"} textoBotao ={"Entrada"} onClick ={() => setOpcoes("entry")}/>
+            <BotaoTransacoes textoBotao ={"Saída"} onClick ={() => setOpcoes("exit")}/> 
 
           </div>
             </div>
-            <button className="Inserirdados">
+            <button onClick={enviar} className="Inserirdados">
               Cadastar
             </button>
         </form>

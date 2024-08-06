@@ -4,13 +4,32 @@ import Card from "./components/cards"
 import Modelo from "./components/modelo"
 
 
-// function olamundo (){
-//   const age = prompt("Por favor, insira sua idade:");
-//   alert("você tem: " + age);
-
+const dataInitial = [
+//   {
+//   title: "Escola",
+//   date: new Date(),
+//   valor: 450,
+//   type: "exit"
+// }, 
+// {
+//   title: "Curso",
+//   date: new Date(),
+//   valor: 234,
+//   type: "entry"
+// },
+// {
+//   title: "Spotify",
+//   date: new Date(),
+//   valor: 100,
+//   type: "entry"
 // }
+
+]
+
+
   function App() {
   const [modeloAberto, setModeloAberto] = useState (false)
+  const [data, setData] = useState (dataInitial)
   
   function alertModeloAberto () {
     setModeloAberto (true)
@@ -23,6 +42,8 @@ import Modelo from "./components/modelo"
 // chave só acima do return
 // para executar uma function colocar em parenteses
   const isOpenModelo = false
+
+  
 
   return (
     <div className='body'>
@@ -40,12 +61,25 @@ import Modelo from "./components/modelo"
         
       </div> 
       <div className="gastos">
-        <Card type={"baixo"} mudar={450} texto ={"Escola"} iconpreco= {"-R$"}valor={"Quarta-feira, 13:00 PM"} typetranse ={"Saída"}/>
-        <Card type={"baixo"} mudar={234} texto ={"Curso"} iconpreco= {"R$"} valor={"Sexta-feira, 17:00 PM"} typetranse ={"Entrada"}/>
-        <Card type={"baixo"} mudar={50} texto ={"Spotify"} iconpreco= {"-R$"} valor={"Domingo, 6:00 AM"} typetranse ={"Saída"}/>
+        {data.map((item, index) => (
+          <Card
+            key={index} 
+            type={"baixo"} 
+            mudar={item.valor} 
+            texto ={item.title} 
+            valor={item.date.toLocaleString()} 
+            typetranse ={item.type}
+          />
+
+        ) )}
         
       </div>
-    {modeloAberto === true ? <Modelo onClickModelo={()=>alertModeloFechado ()}/> : null}
+    {modeloAberto === true ? (
+      <Modelo 
+        data={(item) => setData([...data, item])} 
+        onClickModelo={()=>alertModeloFechado ()}
+      />
+    ) : null}
 
 
     </div>
