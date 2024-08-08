@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 
-export default function Modelo ({onClickModelo, data}){
+export default function Modelo ({onClickModelo, data, titleTeste}){
 
   const [title, setTitle ] = useState("")
   const [valor, setValor] = useState("")
@@ -30,7 +30,9 @@ export default function Modelo ({onClickModelo, data}){
   }
 
 
-
+  function guardarTitle () {
+    titleTeste()
+  }
 
    return (
     <div className="body-modelo" onClick={onClickModelo} >
@@ -45,12 +47,12 @@ export default function Modelo ({onClickModelo, data}){
               justifyContent: "space-between",
               gap: 10
             }}>
-                <EntradaCadastro value={title} placeholder ={"Título"} useOnchange = {lidarComInupt}/>
+                <EntradaCadastro placeholder ={"Título"} useOnchange = {lidarComInupt}/>
                 <EntradaCadastro value={valor} placeholder ={"Valor"} useOnchange={(event) => setValor(event.target.value)}/>
 
           </div>
           <div className="bTransacoes">
-            <BotaoTransacoes typeIcon ={"up"} textoBotao ={"Entrada"} onClick ={() => setOpcoes("entry")}/>
+            <BotaoTransacoes typeIcon ={"up"} textoBotao ={"Entrada"} onClick ={guardarTitle}/>
             <BotaoTransacoes textoBotao ={"Saída"} onClick ={() => setOpcoes("exit")}/> 
 
           </div>

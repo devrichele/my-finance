@@ -4,32 +4,12 @@ import Card from "./components/cards"
 import Modelo from "./components/modelo"
 
 
-const dataInitial = [
-//   {
-//   title: "Escola",
-//   date: new Date(),
-//   valor: 450,
-//   type: "exit"
-// }, 
-// {
-//   title: "Curso",
-//   date: new Date(),
-//   valor: 234,
-//   type: "entry"
-// },
-// {
-//   title: "Spotify",
-//   date: new Date(),
-//   valor: 100,
-//   type: "entry"
-// }
 
-]
 
 
   function App() {
   const [modeloAberto, setModeloAberto] = useState (false)
-  const [data, setData] = useState (dataInitial)
+  const [data, setData] = useState ([])
   
   function alertModeloAberto () {
     setModeloAberto (true)
