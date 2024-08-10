@@ -14,10 +14,10 @@ export default function Modelo ({onClickModelo, data, titleTeste}){
   const [opcoes, setOpcoes] = useState("")
 
 
-  function lidarComInupt (eventos){
+  // function lidarComInupt (eventos){
 
-    setTitle(eventos.target.value)
-  }
+  //   setTitle(eventos.target.value)
+  // }
 
   function enviar (event){
     event.preventDefault()
@@ -29,10 +29,25 @@ export default function Modelo ({onClickModelo, data, titleTeste}){
     onClickModelo()
   }
 
+  function handleValorChange(event) {
 
-  function guardarTitle () {
-    titleTeste()
+    // pega o valor atual do campo de entrada (numero que a pessoa digitou)
+    const inputValor = event.target.value;  
+    if (/^\d*$/.test(inputValor)) {
+          // confere se é apenas número mesmo
+      setValor(inputValor); 
+      // se for número mesmo pode mostrar mulé
+    }
   }
+  
+
+
+  // function guardarTitle (event) {
+  //       event.preventDefault()
+
+  //        data({title:title}),
+  //        onClickModelo()
+  // }
 
    return (
     <div className="body-modelo" onClick={onClickModelo} >
@@ -47,12 +62,12 @@ export default function Modelo ({onClickModelo, data, titleTeste}){
               justifyContent: "space-between",
               gap: 10
             }}>
-                <EntradaCadastro placeholder ={"Título"} useOnchange = {lidarComInupt}/>
-                <EntradaCadastro value={valor} placeholder ={"Valor"} useOnchange={(event) => setValor(event.target.value)}/>
+                <EntradaCadastro title={title} placeholder ={"Título"} useOnchange = {(event) => setTitle (event.target.value)}/>
+                <EntradaCadastro value={valor} placeholder ={"Valor"} useOnchange={handleValorChange}/>
 
           </div>
           <div className="bTransacoes">
-            <BotaoTransacoes typeIcon ={"up"} textoBotao ={"Entrada"} onClick ={guardarTitle}/>
+            <BotaoTransacoes typeIcon ={"up"} textoBotao ={"Entrada"} onClick = {() => setOpcoes ("entry")}/>
             <BotaoTransacoes textoBotao ={"Saída"} onClick ={() => setOpcoes("exit")}/> 
 
           </div>
