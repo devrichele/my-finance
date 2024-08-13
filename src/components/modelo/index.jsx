@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 
-export default function Modelo ({onClickModelo, data, titleTeste}){
+export default function Modelo ({onClickModelo, data}){
 
   const [title, setTitle ] = useState("")
   const [valor, setValor] = useState("")
@@ -19,10 +19,22 @@ export default function Modelo ({onClickModelo, data, titleTeste}){
   //   setTitle(eventos.target.value)
   // }
 
+
   function enviar (event){
     event.preventDefault()
+
+    const now = new Date();
+    const options = { 
+      weekday: 'long',  // Exibe o dia da semana completo
+      hour: '2-digit',  // Mostra as horas com dois dígitos
+      minute: '2-digit',  // Mostra os minutos com dois dígitos
+      hour12: true  // Formato de 12 horas (AM/PM)
+    };
+
+    const formattedDate = now.toLocaleString('pt-BR', options); // Aplica a formatação
+
     data({title: title,
-      date: new Date(),
+      date: formattedDate,
       valor: valor,
       type: opcoes
     })
@@ -42,17 +54,12 @@ export default function Modelo ({onClickModelo, data, titleTeste}){
   
 
 
-  // function guardarTitle (event) {
-  //       event.preventDefault()
 
-  //        data({title:title}),
-  //        onClickModelo()
-  // }
 
    return (
     <div className="body-modelo" onClick={onClickModelo} >
       <div className="conteudoModelo" onClick={(event) => event.stopPropagation()}>
-        <IoIosClose color="#cecece" style={{cursor:"pointer"}} size={25}/>
+        <IoIosClose onClick={onClickModelo} color="#cecece" style={{cursor:"pointer"}} size={25}/>
         <form onSubmit={enviar} className="modelForm">
             <h1> Cadastrar Transação </h1>
        <div>
