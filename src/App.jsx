@@ -25,7 +25,7 @@ import Modelo from "./components/modelo"
 
   function handleData (item){
     setData([...data, item])
-    console.log(item);
+    localStorage.setItem("@richfinance/data",JSON.stringify([...data, item]))
     
     
     if (item.type === "entry" ) {
@@ -56,17 +56,18 @@ import Modelo from "./components/modelo"
     const storageEntrada= localStorage.getItem("@richfinance/entrada")
     const storageSaida= localStorage.getItem("@richfinance/saida")
     const storageTotal= localStorage.getItem("@richfinance/total")
+    const storageData= JSON.parse(localStorage.getItem("@richfinance/data"))
 
-    if (storageEntrada && storageSaida && storageTotal ) {
+    if (storageEntrada && storageSaida && storageTotal && storageData) {
       setEntrada(parseFloat(storageEntrada))
       setSaida(parseFloat(storageSaida))
       setTotal(parseFloat(storageTotal))
+      setData(storageData)
     }
     
   }, [])
 
 
-  console.log(saida, entrada, total, 300);
   
 
   return (
