@@ -25,6 +25,8 @@ import Modelo from "./components/modelo"
 
   function handleData (item){
     setData([...data, item])
+
+    
     if (item.type === "entry" ) {
       setEntrada(entrada+ parseFloat(item.valor)) 
       localStorage.setItem("@richfinance/entrada", entrada+ parseFloat(item.valor))
