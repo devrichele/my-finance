@@ -14,7 +14,7 @@ function Card({texto, valor, type, mudar, typetranse }) {
           <div className="container-card-icon" >
             { texto == "Entradas" && <BsArrowBarUp />}
             { texto == "Saídas" && <BsArrowBarDown />}
-            { texto == "Total" && <BiDollar />}
+            { texto == "Saldo" && <BiDollar />}
             {type == "baixo" && typetranse == "exit" && <BsArrowBarDown />}
             {type == "baixo" && typetranse == "entry" && <BsArrowBarUp />}
 

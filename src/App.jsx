@@ -25,7 +25,8 @@ import Modelo from "./components/modelo"
 
   function handleData (item){
     setData([...data, item])
-
+    console.log(item);
+    
     
     if (item.type === "entry" ) {
       setEntrada(entrada+ parseFloat(item.valor)) 
@@ -52,10 +53,20 @@ import Modelo from "./components/modelo"
   }, [entrada, saida])
 
   useEffect(() => {
-    setEntrada(localStorage.getItem("@richfinance/entrada"))
-    setSaida(localStorage.getItem("@richfinance/saida"))
-    setTotal(localStorage.getItem("@richfinance/total"))
+    const storageEntrada= localStorage.getItem("@richfinance/entrada")
+    const storageSaida= localStorage.getItem("@richfinance/saida")
+    const storageTotal= localStorage.getItem("@richfinance/total")
+
+    if (storageEntrada && storageSaida && storageTotal ) {
+      setEntrada(parseFloat(storageEntrada))
+      setSaida(parseFloat(storageSaida))
+      setTotal(parseFloat(storageTotal))
+    }
+    
   }, [])
+
+
+  console.log(saida, entrada, total, 300);
   
 
   return (
@@ -70,7 +81,7 @@ import Modelo from "./components/modelo"
       <div className='cards'>
         <Card texto ={"Entradas"} valor={entrada}/>
         <Card texto ={"Saídas"} valor={saida}/>
-        <Card texto ={"Total"} valor={total}/>
+        <Card texto ={"Saldo"} valor={total}/>
         
       </div> 
       <div className="gastos">
