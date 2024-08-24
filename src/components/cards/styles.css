@@ -83,5 +83,6 @@
   /* For mobile phones: */
   .card {
     flex: 1;
+    width: 100%;
   }
 }
