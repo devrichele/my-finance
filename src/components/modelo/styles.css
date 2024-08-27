@@ -10,7 +10,7 @@
 }
 
 .conteudoModelo {
-    width: 576px;
+    width: 85%;
     height: 547px;
     background-color: white;
     border-radius: 4px;
@@ -25,9 +25,9 @@
     width: 100%;
     margin-top: 10px;
     color:rgb(112, 109, 109);
-    /* gap: 20px; */
+    gap: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .Inserirdados{
     width: 98%;
@@ -48,3 +48,12 @@
 .Inserirdados{
 margin-top: auto;
 }
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+.conteudoModelo{
+    width: 30%;
+
+}
+      
+    }

@@ -18,7 +18,7 @@
   justify-content: space-between;
   width: 100vw;
   height: 200px;
-  padding: 10px 20%;
+  padding: 10px 5%;
   color: white;
   position: relative;
   z-index: 1;
@@ -44,10 +44,10 @@ button:active {
 }
 
 .cards {
-  width: 900px;
+  width: 90%;
   display: flex;
   position: absolute;
-  top: 150px;
+  top: 100px;
   z-index: 2;
   background-color: rgb(139, 66, 66);
   padding: 15px;
@@ -55,6 +55,7 @@ button:active {
   margin: 0 10px; 
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
   
 }
 
@@ -79,19 +80,35 @@ button:active {
 
 
 .gastos {
-  margin-top: 15%;
+  /* margin top calcula altura de cards pai ou seja container-card dividido por 2 + o espaçamento que eu quero, ou seja 50px */
+  margin-top: calc(90px + 50px);
+  width: 100%;
+  padding: 0px 5%;
 }
 
 .valorBaixo{
   color:rgb(19, 3, 3);
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .cards {
-    width: 100%;
-  }
-  .container-card-icon {
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .empresa {
+      padding: 10px 20%;
+    
     
   }
+
+  .cards {
+    width: 60%;
+
+  }
+  .container-card-icon, .gastos{
+    width: 60%;
+
+  }
+  .gastos{
+    padding: 0px 10%;
+    
+  }
+
 }
