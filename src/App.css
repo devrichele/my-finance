@@ -33,6 +33,7 @@ button {
   background-color: rgb(61, 20, 20);
   border: 0;
   cursor: pointer;
+  justify-content: space-between;
 }
 
 button:hover {
