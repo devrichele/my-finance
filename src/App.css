@@ -29,7 +29,7 @@ button {
   color: white;
   border-radius: 5px;
   height: 48px;
-  width: 192px;
+  width: 185px;
   background-color: rgb(61, 20, 20);
   border: 0;
   cursor: pointer;
@@ -114,6 +114,11 @@ button:active {
   .gastos{
     padding: 0px 10%;
     
+  }
+  
+  button{
+    width: 192px;
+
   }
 
 }
