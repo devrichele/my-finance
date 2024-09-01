@@ -84,7 +84,12 @@ button:active {
   margin-top: calc(90px + 50px);
   width: 100%;
   padding: 0px 5%;
-}
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  }
+
+
 
 .valorBaixo{
   color:rgb(19, 3, 3);
