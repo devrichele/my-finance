@@ -48,7 +48,7 @@ export default function Modelo ({onClickModelo, data}){
     if (/^\d*$/.test(inputValor)) {
           // confere se é apenas número mesmo
       setValor(inputValor); 
-      // se for número mesmo pode mostrar mulé
+      // se for número mesmo pode mostrar 
     }
   }
   
