@@ -10,7 +10,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  
 }
 
 .empresa {
@@ -53,32 +52,27 @@ button:active {
   background-color: rgb(139, 66, 66);
   padding: 15px;
   text-align: center;
-  margin: 0 10px; 
+  margin: 0 10px;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  
 }
-
 
 .container-card-icon {
   width: 95px;
   height: 100px;
   background-color: rgb(236, 163, 163);
-  border-radius: 45%; 
+  border-radius: 45%;
   display: flex;
   align-items: center;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 
-.transacoes{
-  color:rgb(63, 21, 21);
+.transacoes {
+  color: rgb(63, 21, 21);
   flex-direction: column;
   align-items: center;
-  
-  
 }
-
 
 .gastos {
   /* margin top calcula altura de cards pai ou seja container-card dividido por 2 + o espaçamento que eu quero, ou seja 50px */
@@ -87,39 +81,31 @@ button:active {
   padding: 0px 5%;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; 
-  }
+  gap: 20px;
+}
 
-
-
-.valorBaixo{
-  color:rgb(19, 3, 3);
+.valorBaixo {
+  color: rgb(19, 3, 3);
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   .empresa {
-      padding: 10px 20%;
-    
-    
+    padding: 10px 20%;
   }
 
   .cards {
     width: 60%;
-
   }
-  .container-card-icon, .gastos{
+  .container-card-icon,
+  .gastos {
     width: 60%;
-
   }
-  .gastos{
+  .gastos {
     padding: 0px 10%;
-    
   }
-  
-  button{
+
+  button {
     width: 192px;
-
   }
-
 }

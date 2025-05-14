@@ -43,14 +43,16 @@ export default function Modelo ({onClickModelo, data}){
 
   function handleValorChange(event) {
 
-    // pega o valor atual do campo de entrada (numero que a pessoa digitou)
-    const inputValor = event.target.value;  
-    if (/^\d*$/.test(inputValor)) {
-          // confere se é apenas número mesmo
-      setValor(inputValor); 
-      // se for número mesmo pode mostrar 
+    let inputValor = event.target.value;
+
+    // Substitui vírgula por ponto para aceitar formato brasileiro
+    inputValor = inputValor.replace(",", ".");
+
+    // Permite apenas números com um ponto decimal (ex: 35.45)
+    if (/^\d*\.?\d*$/.test(inputValor)) {
+      setValor(inputValor);
     }
-  }
+    }
   
 
 
